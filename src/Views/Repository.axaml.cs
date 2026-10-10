@@ -515,12 +515,12 @@ namespace SourceGit.Views
             var layout = ViewModels.Preferences.Instance.Layout;
             if (_isCommitSearchPanelVisible)
             {
-                SidebarMinWidth = 200;
+                SidebarMinWidth = 120;
                 SidebarWidth = new GridLength(layout.RepositorySearchCommitWidth, GridUnitType.Pixel);
             }
             else if (_isNormalSidebarVisible)
             {
-                SidebarMinWidth = 200;
+                SidebarMinWidth = 120;
                 SidebarWidth = new GridLength(layout.RepositorySidebarWidth, GridUnitType.Pixel);
             }
             else

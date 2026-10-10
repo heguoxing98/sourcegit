@@ -614,7 +614,7 @@
   </Style>
 
   <Style Selector="Button.caption_button">
-    <Setter Property="Width" Value="48"/>
+    <Setter Property="Width" Value="34"/>
     <Setter Property="BorderThickness" Value="0"/>
     <Setter Property="VerticalAlignment" Value="Stretch"/>
   </Style>

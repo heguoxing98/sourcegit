@@ -8,6 +8,7 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <SuppressTrimAnalysisWarnings>true</SuppressTrimAnalysisWarnings>
     <InvariantGlobalization>false</InvariantGlobalization>
+    <DisableUpdateDetection>true</DisableUpdateDetection>
 
     <Product>SourceGit</Product>
     <Description>OpenSource GIT client</Description>

@@ -12,12 +12,12 @@
              x:Name="ThisControl">  
   <Grid>
     <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="49"/>
+      <ColumnDefinition Width="40"/>
       <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
 
     <!-- Page Switcher -->
-    <Grid Grid.Column="0" Width="49" RowDefinitions="Auto,*,Auto,12">
+    <Grid Grid.Column="0" Width="40" RowDefinitions="Auto,*,Auto,12">
       <ListBox Background="Transparent" SelectedIndex="{Binding SelectedViewIndex, Mode=TwoWay}" SelectionMode="AlwaysSelected">
         <ListBox.Styles>
           <Style Selector="Path.icon">
@@ -28,11 +28,11 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
           </Style>
           <Style Selector="ListBoxItem">
-            <Setter Property="Height" Value="42"/>
-            <Setter Property="Margin" Value="4"/>
+            <Setter Property="Height" Value="36"/>
+            <Setter Property="Margin" Value="4,2"/>
             <Setter Property="Padding" Value="0"/>
             <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="CornerRadius" Value="4"/>
+            <Setter Property="CornerRadius" Value="5"/>
           </Style>
           <Style Selector="ListBoxItem:pointerover /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="Background" Value="#18888888"/>
@@ -116,7 +116,7 @@
       
       <Button Grid.Row="2"
               Classes="icon_button"
-              Width="40" Height="40"
+              Width="32" Height="40"
               Margin="4,0"
               Click="OnOpenConfigure"
               ToolTip.Tip="{DynamicResource Text.Repository.Configure}"

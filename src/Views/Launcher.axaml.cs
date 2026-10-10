@@ -36,10 +36,8 @@ namespace SourceGit.Views
         {
             if (OperatingSystem.IsMacOS())
                 CaptionHeight = new GridLength(34);
-            else if (UseSystemWindowFrame)
-                CaptionHeight = new GridLength(30);
             else
-                CaptionHeight = new GridLength(38);
+                CaptionHeight = new GridLength(30);
 
             InitializeComponent();
             PositionChanged += OnPositionChanged;
@@ -94,8 +92,8 @@ namespace SourceGit.Views
                 var state = (WindowState)change.NewValue!;
                 _lastWindowState = (WindowState)change.OldValue!;
 
-                if (!OperatingSystem.IsMacOS() && !UseSystemWindowFrame)
-                    CaptionHeight = new GridLength(state == WindowState.Maximized ? 30 : 38);
+                // Caption bar height is fixed to 30 for both maximized and normal states,
+                // so the tab bar behaves identically in either state.
 
                 ViewModels.Preferences.Instance.Layout.LauncherWindowState = state;
             }

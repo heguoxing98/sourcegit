@@ -5,15 +5,74 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SourceGit.Views.CaptionButtons"
              x:Name="ThisControl">
+  <UserControl.Styles>
+    <!-- Override global hover style: do NOT fill the whole button area -->
+    <Style Selector="Button.caption_button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="Transparent"/>
+    </Style>
+
+    <!-- Base transparent backdrop (style priority, so :pointerover styles can override) -->
+    <Style Selector="Border.hover_backdrop">
+      <Setter Property="Background" Value="Transparent"/>
+    </Style>
+
+    <!-- White icon for readability on saturated hover backdrop.
+         Hover is judged on the 22x22 square (hover_zone), not the whole 38x30 button. -->
+    <Style Selector="Button.caption_button Panel.hover_zone:pointerover Path">
+      <Setter Property="Fill" Value="White"/>
+    </Style>
+    <Style Selector="Button.caption_button Panel.hover_zone:pointerover Rectangle">
+      <Setter Property="Fill" Value="White"/>
+    </Style>
+
+    <!-- Base fill for the minimize bar (Rectangle centers reliably, unlike stretched geometry) -->
+    <Style Selector="Button.caption_button Rectangle">
+      <Setter Property="Fill" Value="{DynamicResource Brush.FG1}"/>
+    </Style>
+
+    <!-- Square hover backdrop for each caption button -->
+    <Style Selector="Button.min_btn Panel.hover_zone:pointerover Border.hover_backdrop">
+      <Setter Property="Background" Value="#0078D7"/>
+    </Style>
+    <Style Selector="Button.max_btn Panel.hover_zone:pointerover Border.hover_backdrop">
+      <Setter Property="Background" Value="#107C10"/>
+    </Style>
+    <Style Selector="Button.close_btn Panel.hover_zone:pointerover Border.hover_backdrop">
+      <Setter Property="Background" Value="#E81123"/>
+    </Style>
+  </UserControl.Styles>
+
   <StackPanel Orientation="Horizontal">
-    <Button Classes="caption_button" Click="MinimizeWindow" Win32Properties.NonClientHitTestResult="MinButton" IsVisible="{Binding !#ThisControl.IsCloseButtonOnly}">
-      <Path Width="11" Height="11" Margin="0,2,0,0" Data="{StaticResource Icons.Window.Minimize}"/>
+    <Button Classes="caption_button min_btn" Click="MinimizeWindow" Win32Properties.NonClientHitTestResult="MinButton" IsVisible="{Binding !#ThisControl.IsCloseButtonOnly}">
+      <Panel Classes="hover_zone">
+        <Border Classes="hover_backdrop"
+                Width="22" Height="22"
+                CornerRadius="5"
+                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Rectangle Width="11" Height="1"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+      </Panel>
     </Button>
-    <Button Classes="caption_button max_or_restore_btn" Click="MaximizeOrRestoreWindow" Win32Properties.NonClientHitTestResult="MaxButton" IsVisible="{Binding !#ThisControl.IsCloseButtonOnly}">
-      <Path Width="10" Height="10" Margin="0,4,0,0"/>
+    <Button Classes="caption_button max_btn max_or_restore_btn" Click="MaximizeOrRestoreWindow" Win32Properties.NonClientHitTestResult="MaxButton" IsVisible="{Binding !#ThisControl.IsCloseButtonOnly}">
+      <Panel Classes="hover_zone">
+        <Border Classes="hover_backdrop"
+                Width="22" Height="22"
+                CornerRadius="5"
+                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Path Width="10" Height="10"
+              HorizontalAlignment="Center" VerticalAlignment="Center"/>
+      </Panel>
     </Button>
-    <Button Classes="caption_button" Click="CloseWindow" Win32Properties.NonClientHitTestResult="Close">
-      <Path Width="9" Height="9" Margin="0,4,2,0" Data="{StaticResource Icons.Window.Close}"/>
+    <Button Classes="caption_button close_btn" Click="CloseWindow" Win32Properties.NonClientHitTestResult="Close">
+      <Panel Classes="hover_zone">
+        <Border Classes="hover_backdrop"
+                Width="22" Height="22"
+                CornerRadius="5"
+                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Path Width="9" Height="9"
+              HorizontalAlignment="Center" VerticalAlignment="Center"
+              Data="{StaticResource Icons.Window.Close}"/>
+      </Panel>
     </Button>
   </StackPanel>
 </UserControl>
