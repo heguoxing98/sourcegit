@@ -10,7 +10,7 @@
                     x:Class="SourceGit.Views.DirHistories"
                     x:DataType="vm:DirHistories"
                     x:Name="ThisControl"
-                    Icon="/App.ico"
+                    Icon="/square-gitlab.ico"
                     Title="{DynamicResource Text.DirHistories}"
                     MinWidth="1280" MinHeight="720">
   <Grid RowDefinitions="Auto,28,1,*">

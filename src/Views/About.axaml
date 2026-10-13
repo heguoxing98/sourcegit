@@ -6,7 +6,7 @@
                     mc:Ignorable="d" d:DesignWidth="520" d:DesignHeight="230"
                     x:Class="SourceGit.Views.About"
                     x:Name="ThisControl"
-                    Icon="/App.ico"
+                    Icon="/square-gitlab.ico"
                     Title="{DynamicResource Text.About}"
                     SizeToContent="WidthAndHeight"
                     CanResize="False"
@@ -38,7 +38,7 @@
     <StackPanel Orientation="Horizontal">
       <Image Width="200" Height="200"
              Margin="8,0"
-             Source="/App.ico"
+             Source="/square-gitlab.ico"
              HorizontalAlignment="Center"
              VerticalAlignment="Center"/>
 

@@ -10,7 +10,7 @@
                     x:Class="SourceGit.Views.MergeConflictEditor"
                     x:DataType="vm:MergeConflictEditor"
                     x:Name="ThisControl"
-                    Icon="/App.ico"
+                    Icon="/square-gitlab.ico"
                     Title="{DynamicResource Text.MergeConflictEditor.Title}"
                     MinWidth="1024" MinHeight="600">
   <Grid RowDefinitions="Auto,32,*,32">

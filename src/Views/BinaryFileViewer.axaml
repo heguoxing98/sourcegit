@@ -9,7 +9,7 @@
                     x:Class="SourceGit.Views.BinaryFileViewer"
                     x:Name="ThisControl"
                     x:DataType="vm:BinaryFileViewer"
-                    Icon="/App.ico"
+                    Icon="/square-gitlab.ico"
                     Title="{DynamicResource Text.File.HexViewer}"
                     Width="800" Height="600"
                     WindowStartupLocation="CenterOwner">

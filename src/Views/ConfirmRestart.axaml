@@ -7,7 +7,7 @@
                     x:Class="SourceGit.Views.ConfirmRestart"
                     x:Name="ThisControl"
                     Title="Restart Required"
-                    Icon="/App.ico"
+                    Icon="/square-gitlab.ico"
                     CanResize="False"
                     SizeToContent="WidthAndHeight"
                     WindowStartupLocation="CenterOwner">

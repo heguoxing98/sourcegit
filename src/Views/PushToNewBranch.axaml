@@ -8,7 +8,7 @@
                     x:Class="SourceGit.Views.PushToNewBranch"
                     x:Name="ThisControl"
                     x:DataType="vm:PushToNewBranch"
-                    Icon="/App.ico"
+                    Icon="/square-gitlab.ico"
                     Title="{DynamicResource Text.PushToNewBranch}"
                     Width="400" SizeToContent="Height"
                     CanResize="False"

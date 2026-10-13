@@ -3,7 +3,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0</TargetFramework>
     <ApplicationManifest>App.manifest</ApplicationManifest>
-    <ApplicationIcon>App.ico</ApplicationIcon>
+<ApplicationIcon>square-gitlab.ico</ApplicationIcon>
     <Version>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)\\..\\VERSION"))</Version>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <SuppressTrimAnalysisWarnings>true</SuppressTrimAnalysisWarnings>
@@ -39,7 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <AvaloniaResource Include="App.ico" />
+<AvaloniaResource Include="square-gitlab.ico" />
     <AvaloniaResource Include="Resources/Fonts/*" />
     <AvaloniaResource Include="Resources/Grammars/*" />
     <AvaloniaResource Include="Resources/Images/*" />

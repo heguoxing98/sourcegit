@@ -10,7 +10,7 @@
                     x:DataType="vm:ViewLogs"
                     x:Name="ThisControl"
                     Title="{DynamicResource Text.ViewLogs}"
-                    Icon="/App.ico"
+                    Icon="/square-gitlab.ico"
                     Width="800" Height="500"
                     CanResize="True"
                     WindowStartupLocation="CenterOwner">

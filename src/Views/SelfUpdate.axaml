@@ -10,7 +10,7 @@
                     x:DataType="vm:SelfUpdate"
                     x:Name="ThisControl"
                     Title="{DynamicResource Text.SelfUpdate.Title}"
-                    Icon="/App.ico"
+                    Icon="/square-gitlab.ico"
                     SizeToContent="WidthAndHeight"
                     CanResize="False"
                     WindowStartupLocation="CenterOwner">

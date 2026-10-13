@@ -10,7 +10,7 @@
                     x:Class="SourceGit.Views.Blame"
                     x:DataType="vm:Blame"
                     x:Name="ThisControl"
-                    Icon="/App.ico"
+                    Icon="/square-gitlab.ico"
                     Title="{DynamicResource Text.Blame}"
                     MinWidth="1280" MinHeight="720">
   <Grid RowDefinitions="Auto,32,*,36">
