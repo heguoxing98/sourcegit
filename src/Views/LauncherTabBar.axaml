@@ -14,7 +14,7 @@
     <RepeatButton Grid.Column="0"
                   Classes="icon_button"
                   Width="18" Height="28"
-                  Margin="0,2,0,0"
+                  VerticalAlignment="Center"
                   Click="ScrollTabsLeft"
                   IsVisible="{Binding #ThisControl.IsScrollButtonVisible}">
       <Path Width="8" Height="14" Stretch="Fill" Data="{StaticResource Icons.TriangleLeft}"/>
@@ -27,7 +27,7 @@
                   HorizontalScrollBarVisibility="Hidden"
                   VerticalScrollBarVisibility="Disabled"
                   PointerWheelChanged="ScrollTabs">
-      <StackPanel Orientation="Horizontal">
+      <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
         <ListBox x:Name="LauncherTabsList"
                  Background="Transparent"
                  ItemsSource="{Binding Pages}"
@@ -139,7 +139,7 @@
 
         <Button Classes="icon_button"
                 Width="16" Height="16"
-                Margin="8,2,8,0"
+                Margin="8,0" VerticalAlignment="Center"
                 Command="{Binding AddNewTab}"
                 IsVisible="{Binding !#ThisControl.IsScrollButtonVisible}">
           <ToolTip.Tip>
@@ -158,12 +158,12 @@
       </StackPanel>
     </ScrollViewer>
 
-    <StackPanel Grid.Column="2" Orientation="Horizontal" IsVisible="{Binding #ThisControl.IsScrollButtonVisible}">
-      <RepeatButton Classes="icon_button" Width="18" Height="28" Margin="0,2,0,0" Click="ScrollTabsRight">
+    <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" IsVisible="{Binding #ThisControl.IsScrollButtonVisible}">
+      <RepeatButton Classes="icon_button" Width="18" Height="28" Click="ScrollTabsRight">
         <Path Width="8" Height="14" Stretch="Fill" Data="{StaticResource Icons.TriangleRight}"/>
       </RepeatButton>
 
-      <Button Classes="icon_button" Width="16" Height="28" Margin="4,2,0,0" Command="{Binding AddNewTab}">
+      <Button Classes="icon_button" Width="16" Height="28" Margin="4,0,0,0" Command="{Binding AddNewTab}">
         <ToolTip.Tip>
           <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
             <TextBlock Text="{DynamicResource Text.PageTabBar.New}" VerticalAlignment="Center"/>
